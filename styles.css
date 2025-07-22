@@ -1,0 +1,173 @@
+/* ─── styles.css ─── */
+
+/* 기본 레이아웃 */
+body {
+  background-color: #f2f2f2;
+  color: #333333;
+  font-family: 'Noto Serif KR', serif;
+  margin: 0;
+  padding: 0;
+}
+header, section, footer {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 30px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+header {
+  background: #e8e8e8;
+  text-align: center;
+}
+header img {
+  display: block;
+  margin: 0 auto 16px;
+  max-width: 160px;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+header p {
+  margin-bottom: 6px;
+  color: #555555;
+}
+
+/* 섹션 제목 */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #dddddd;
+  padding-bottom: 8px;
+  color: #000000;
+}
+
+/* 프로젝트 소개 박스 */
+.project-info {
+  border: 1px solid #cccccc;
+  background: #ffffff;
+  padding: 16px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+.project-info p {
+  margin: 8px 0;
+}
+.project-info p strong {
+  display: inline-block;
+  width: 80px;
+}
+
+/* 리스트 공통 */
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+ul li, ol li {
+  margin-bottom: 8px;
+}
+
+/* 링크 스타일 */
+a {
+  color: #2a8fbd;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* recruit 섹션 카드 통일 */
+section#recruit .position-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: none;
+}
+section#recruit .position-header {
+  background: transparent;
+  border-bottom: none;
+  padding: 15px 20px;
+}
+section#recruit .position-title {
+  color: #333333;
+  margin: 0;
+}
+
+/* 상태 배지 */
+.status {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 80px;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.status.open   { background-color: #000000; color: #ffffff; }
+.status.closed { background-color: #aaaaaa; color: #ffffff; }
+
+/* position-content */
+section#recruit .position-content {
+  background: transparent;
+  padding: 20px;
+}
+
+/* CLOSED 오버레이 */
+section#recruit .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 6px 6px;
+}
+section#recruit .overlay-label {
+  transform: rotate(-15deg);
+  border: 2px solid #9a0000;
+  background: rgba(10,10,10,0.8);
+  padding: 10px 20px;
+  color: #000000;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* 담당 업무 리스트 */
+.section-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 10px;
+}
+.duties-list {
+  list-style: none;
+  padding-left: 0;
+}
+.duties-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+.duties-list li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: #aaaaaa;
+}
+
+/* 푸터 */
+footer {
+  background: transparent;
+  box-shadow: none;
+  padding: 20px 0;
+  color: #777777;
+  text-align: center;
+}
