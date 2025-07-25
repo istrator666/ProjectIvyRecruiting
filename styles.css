@@ -2,23 +2,28 @@
 
 /* 기본 레이아웃 */
 body {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   color: #333333;
   font-family: 'Noto Serif KR', serif;
   margin: 0;
   padding: 0;
 }
+
+/* 공통 섹션 배경색 & 텍스트 색상 */
 header, section, footer {
   width: 90%;
   max-width: 800px;
   margin: 40px auto;
-  background: #ffffff;
+  background: #444444;
+  color: #ffffff;
   border-radius: 8px;
   padding: 30px 20px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+
+/* 헤더 */
 header {
-  background: #e8e8e8;
+  background: #333333;
   text-align: center;
 }
 header img {
@@ -32,16 +37,47 @@ header h1 {
 }
 header p {
   margin-bottom: 6px;
-  color: #555555;
+  color: #dddddd;
 }
 
 /* 섹션 제목 */
 section h2 {
   font-size: 1.8rem;
   margin-bottom: 16px;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #666666;
   padding-bottom: 8px;
-  color: #000000;
+  color: #ffffff;
+}
+
+/* 프로젝트 소개 섹션 내 로고 갤러리 */
+#intro .gallery-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;            /* 이미지 사이 간격 */
+  margin-bottom: 20px;  /* 갤러리와 제목 사이 여백 */
+}
+#intro .gallery-container img {
+  flex: 1;              /* 균등 너비 분배 */
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* 비디오 섹션 */
+section#video .video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 비율 */
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+}
+section#video .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* 프로젝트 소개 박스 */
@@ -51,6 +87,7 @@ section h2 {
   padding: 16px;
   margin-top: 20px;
   border-radius: 4px;
+  color: #333333;
 }
 .project-info p {
   margin: 8px 0;
@@ -132,7 +169,7 @@ section#recruit .overlay {
 }
 section#recruit .overlay-label {
   transform: rotate(-15deg);
-  border: 2px solid #9a0000;
+  border: 2px solid #ff0000;
   background: rgba(10,10,10,0.8);
   padding: 10px 20px;
   color: #000000;
